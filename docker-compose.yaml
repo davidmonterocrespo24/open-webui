@@ -6,6 +6,8 @@ services:
     pull_policy: always
     tty: true
     restart: unless-stopped
+    ports:
+      - 11434:11434
     image: ollama/ollama:${OLLAMA_DOCKER_TAG-latest}
 
   open-webui:
